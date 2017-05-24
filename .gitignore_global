@@ -1,6 +1,4 @@
 
-#ignore thumbnails created by windows
-Thumbs.db
 #Ignore files build by Visual Studio
 *.obj
 *.exe
@@ -35,3 +33,28 @@ Thumbs.db
 node_modules/
 gradlew
 gradlew.bat
+ 
+
+ # Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Logs and databases #
+######################
+*.log
+
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
