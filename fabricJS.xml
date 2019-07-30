@@ -6,10 +6,18 @@
     <option name="ENFORCE_TRAILING_COMMA" value="Remove" />
     <option name="SPACES_WITHIN_OBJECT_LITERAL_BRACES" value="true" />
   </JSCodeStyleSettings>
+  <Shell_Script>
+    <option name="REDIRECT_FOLLOWED_BY_SPACE" value="true" />
+  </Shell_Script>
   <codeStyleSettings language="JavaScript">
     <indentOptions>
       <option name="USE_TAB_CHARACTER" value="true" />
       <option name="SMART_TABS" value="true" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language="Shell Script">
+    <indentOptions>
+      <option name="USE_TAB_CHARACTER" value="true" />
     </indentOptions>
   </codeStyleSettings>
 </code_scheme>
