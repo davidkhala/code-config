@@ -1,0 +1,39 @@
+version: 2 # use CircleCI 2.0
+jobs:
+  build: # runs not using Workflows must have a `build` job as entry point
+    machine:
+      image: ubuntu-1604:201903-01
+    steps: # steps that comprise the `build` job
+      - checkout # check out source code to working directory
+      - run:
+          name: install missing packages
+          command: sudo apt-get install software-properties-common; sudo apt-get update
+      - run:
+          name: install golang
+          command: curl --silent --show-error https://raw.githubusercontent.com/davidkhala/fabric-common/release-1.4/install.sh | bash -s golang11
+      - run:
+          name: add token
+          command: cp ./.cicd/.netrc $HOME/; cp ./.cicd/.npmrc .
+      - run:
+          name: clone chaincode
+          command: ./install.sh updateChaincode;
+      - run:
+          name: install majority
+          command: curl --silent --show-error https://raw.githubusercontent.com/davidkhala/fabric-common/release-1.4/install.sh | bash
+      - run:
+          name: machine node version reconfigure
+          command: ./.circleci/helper.sh nvm8;
+      - run:
+          command: npm install;
+      - run:
+          name: integration test[MCC]
+          command: node test/uat/taskMCC.js
+      - run:
+          name: integration test[UCA]
+          command: node test/uat/taskUCA.js
+      - run:
+          name: build network
+          command: ./docker.sh
+      - run:
+          name: install pm2
+          command: sudo npm install pm2 -g
