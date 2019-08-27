@@ -9,4 +9,4 @@ jobs:
           name: machine node version reconfigure
           command: ./.circleci/helper.sh nvm8;
       - run:
-          command: echo BASH_ENV = $BASH_ENV;node --version;
+          command: node --version;which node
