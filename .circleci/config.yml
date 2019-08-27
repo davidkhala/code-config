@@ -3,7 +3,7 @@ jobs:
   build: # runs not using Workflows must have a `build` job as entry point
     machine:
       image: ubuntu-1604:201903-01
-    steps: # steps that comprise the `build` job
+    steps:
       - checkout # check out source code to working directory
       - run:
           name: machine node version reconfigure
