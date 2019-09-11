@@ -14,4 +14,4 @@ jobs:
           name: env fix
           command: ./.circleci/helper.sh envFix;
       - run:
-          command: cd $CIRCLE_WORKING_DIRECTORY 
+          command: cd $CIRCLE_WORKING_DIRECTORY; echo $PWD;
