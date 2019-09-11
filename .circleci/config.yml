@@ -10,3 +10,8 @@ jobs:
           command: ./.circleci/helper.sh nvm8;
       - run:
           command: node --version;which node
+      - run:
+          name: env fix
+          command: ./.circleci/helper.sh envFix;
+      - run:
+          command: cd $CIRCLE_WORKING_DIRECTORY 

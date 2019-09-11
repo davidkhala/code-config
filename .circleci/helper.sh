@@ -9,4 +9,7 @@ nvm8() {
   nvm install 8
   nvm alias default v8
 }
+envFix() {
+  echo 'export CIRCLE_WORKING_DIRECTORY=$HOME/project' >>$BASH_ENV
+}
 $1
