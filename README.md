@@ -9,5 +9,6 @@ code style configs and guidance
 
 
 ignore config set
-- gitignore
-- npmignore
+- .gitignore: not included in `git commit`
+- .npmignore: not included in `npm publish`
+- .dockerignore: not included in `docker build`
