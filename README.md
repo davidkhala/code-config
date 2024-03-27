@@ -7,7 +7,7 @@ code style configs and guidance
 - nodejs
   - standards: ESLint, TSLint
 - java
-  - [google-java-format provide jetbrain plugin](https://github.com/google/google-java-format)
+  - [google-java-format](https://github.com/google/google-java-format) provides jetbrain plugin
 
 ignore config set
 - .gitignore: not included in `git commit`
